@@ -1,0 +1,51 @@
+
+# Start yum configuration
+curl "http://192.168.1.1/cblr/svc/op/yum/profile/CentOS-7-x86_64" --output /etc/yum.repos.d/cobbler-config.repo
++ curl http://192.168.1.1/cblr/svc/op/yum/profile/CentOS-7-x86_64 --output /etc/yum.repos.d/cobbler-config.repo
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   116  100   116    0     0   2652      0 --:--:-- --:--:-- --:--:--  2761
+
+# End yum configuration
+
+
+
+# Start post_install_network_config generated code
+# End post_install_network_config generated code
+
+
+
+
+# Start download cobbler managed config files (if applicable)
+# End download cobbler managed config files (if applicable)
+
+# Start koan environment setup
+echo "export COBBLER_SERVER=192.168.1.1" > /etc/profile.d/cobbler.sh
++ echo 'export COBBLER_SERVER=192.168.1.1'
+echo "setenv COBBLER_SERVER 192.168.1.1" > /etc/profile.d/cobbler.csh
++ echo 'setenv COBBLER_SERVER 192.168.1.1'
+# End koan environment setup
+
+# begin Red Hat management server registration
+# not configured to register to any Red Hat management server (ok)
+# end Red Hat management server registration
+
+# Begin cobbler registration
+# cobbler registration is disabled in /etc/cobbler/settings
+# End cobbler registration
+
+# Enable post-install boot notification
+
+# Start final steps
+
+curl "http://192.168.1.1/cblr/svc/op/ks/profile/CentOS-7-x86_64" -o /root/cobbler.ks
++ curl http://192.168.1.1/cblr/svc/op/ks/profile/CentOS-7-x86_64 -o /root/cobbler.ks
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  2960  100  2960    0     0  64953      0 --:--:-- --:--:-- --:--:-- 65777
+curl "http://192.168.1.1/cblr/svc/op/trig/mode/post/profile/CentOS-7-x86_64" -o /dev/null
++ curl http://192.168.1.1/cblr/svc/op/trig/mode/post/profile/CentOS-7-x86_64 -o /dev/null
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100     4  100     4    0     0     93      0 --:--:-- --:--:-- --:--:--    95
+# End final steps

@@ -1,0 +1,24 @@
+
+# Once root's homedir is there, copy over the log.
+while : ; do
+    sleep 10
+    if [ -d /mnt/sysimage/root ]; then
+        cp /tmp/ks-pre.log /mnt/sysimage/root/
+        logger "Copied %pre section log to system"
+        break
+    fi
+done &
+
+
+curl "http://192.168.1.1/cblr/svc/op/trig/mode/pre/profile/CentOS-7-x86_64" -o /dev/null
++ curl http://192.168.1.1/cblr/svc/op/trig/mode/pre/profile/CentOS-7-x86_64 -o /dev/null
++ :
++ sleep 10
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100     4  100     4    0     0     79      0 --:--:-- --:--:-- --:--:--   100
+
+# Enable installation monitoring
+
++ '[' -d /mnt/sysimage/root ']'
++ cp /tmp/ks-pre.log /mnt/sysimage/root/
