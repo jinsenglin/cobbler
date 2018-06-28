@@ -3,3 +3,7 @@
 ```
 sudo ip addr add 192.168.1.1/24 dev enp0s8
 ```
+
+# DEFAULT ROOT PASS
+
+cobbler
