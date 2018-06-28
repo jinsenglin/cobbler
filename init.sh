@@ -3,7 +3,7 @@
 set -e
 
 function enp0s8 {
-    sudo ip addr add 192.168.1.1 dev enp0s8
+    sudo ip addr add 192.168.1.1/24 dev enp0s8
 
     # Warning NOT PERMANENTLY !
 }
