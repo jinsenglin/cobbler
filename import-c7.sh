@@ -18,7 +18,7 @@ function check {
 }
 
 function ks {
-    wget https://raw.githubusercontent.com/jinsenglin/distro/master/anaconda-ks.cfg
+    wget https://raw.githubusercontent.com/jinsenglin/distro/master/anaconda-ks.cfg # bug
 
     sudo mv anaconda-ks.cfg /var/lib/cobbler/kickstarts/CentOS-7.ks
 
@@ -29,7 +29,7 @@ function ks {
 if [ -z $1 ]; then
     distro
     check
-    ks
+    # ks
 else
     $1
 fi
