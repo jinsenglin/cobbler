@@ -86,6 +86,10 @@ function dhcpd {
     sudo systemctl status dhcpd.service
 }
 
+function init6 {
+    echo "Now please manually reboot to complete installation."
+}
+
 if [ -z $1 ]; then
     enp0s8
     firewalld
@@ -95,6 +99,7 @@ if [ -z $1 ]; then
     setup
     check_2
     dhcpd
+    init6
 else
     $1
 fi
