@@ -80,8 +80,9 @@ function check_2 {
 }
 
 function dhcpd {
-    sudo systemctl enable dhcpd.service
-    sudo systemctl start dhcpd.service
+#    sudo systemctl enable dhcpd.service
+#    sudo systemctl start dhcpd.service
+    sudo systemctl status dhcpd.service
 }
 
 if [ -z $1 ]; then
