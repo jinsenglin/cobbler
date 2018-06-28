@@ -72,6 +72,7 @@ function setup {
     sudo systemctl restart cobblerd.service
 
     sleep 1 # wait for cobblerd up
+    sudo ip addr add 192.168.1.1/24 dev enp0s8 # workaround
     sudo cobbler sync
 }
 
